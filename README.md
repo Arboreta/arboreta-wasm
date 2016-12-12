@@ -4,13 +4,14 @@ Common Lisp tooling for [WebAssembly](http://webassembly.org) in the Arboreta en
 
 arboret-wasm requires the [WASM Binary Toolkit](https://github.com/WebAssembly/wabt)
 
+# Installation
+run "sbcl --core image.ccl --script test-server.lisp" against a sbcl image with the package requirements found in test-server.lisp to compile an executable Hunchentoot site at localhost:8004 serving /output/out.wasm
+
 
 # Roadmap
 
-* browser test tooling 
-* [OCaml implementation](https://github.com/WebAssembly/spec) analysis
-* basic VM layout
+* basic VM layout (see [OCaml implementation](https://github.com/WebAssembly/spec) )
 * CL parser
 * wasm generator
-* further bootstrapping
-* wasm runtime debugger from Arboreta
+* further bootstrapping CL repl
+* wasm runtime debugger in Arboreta
