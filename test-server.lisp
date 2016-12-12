@@ -13,15 +13,16 @@
 	    ;; future wasm js api will support <script> for wasm
 	    ;; creates 'instance' object 
 	    (:script :type "text/javascript" 
-		     (str "
+		     (str "var buf = null
 req = new XMLHttpRequest();
 req.open('GET', 'output/out.wasm', true);
 req.responseType = 'arraybuffer';
 
 req.onload = function (oEvent) {
   buf = new Uint8Array(req.response);
+  Wasm.instantiateModule(buf);
 }; req.send(null);
-Wasm.instantiateModule(buf);"		  
+"		  
 		      ))
 	    (:body :bgcolor "black" :style "color:#FFFFFF;"
 		   (:div :id "container"))
