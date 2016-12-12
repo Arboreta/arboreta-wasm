@@ -1,6 +1,6 @@
-(defpackage :borealis
+(defpackage :arboreta-wasm
  (:use "COMMON-LISP" "HUNCHENTOOT" "CL-WHO" "PARENSCRIPT" "CL-FAD")
-) (in-package :borealis)
+) (in-package :arboreta-wasm)
 
 (setq site-instance (hunchentoot::make-instance 
 		  'hunchentoot::easy-acceptor :port 8004))
