@@ -2,7 +2,7 @@
 
 Common Lisp tooling for [WebAssembly](http://webassembly.org) in the Arboreta environment. Far future goals include a native debugger for the browser target and progressive compatability of sbcl code.
 
-arboret-wasm requires the [WASM Binary Toolkit](https://github.com/WebAssembly/wabt)
+arboret-wasm requires the [WASM Binary Toolkit](https://github.com/WebAssembly/wabt), code in wasm.cl is [Lisp tooling for reading/writing wasm by Douglas Crosher of the WLL project](https://github.com/wllang/wll)
 
 # Installation
 run "sbcl --core image.ccl --script test-server.lisp" against a sbcl image with the package requirements found in test-server.lisp to compile an executable Hunchentoot site at localhost:8004 serving /output/out.wasm
